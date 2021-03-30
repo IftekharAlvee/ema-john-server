@@ -10,6 +10,9 @@ const app = express()
 app.use(express.json());
 app.use(cors());
 
+app.get('/', (req, res) =>{
+    res.send('Hello I am working ')
+})
 
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 client.connect(err => {
